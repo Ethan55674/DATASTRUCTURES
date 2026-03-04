@@ -1,0 +1,22 @@
+#include "stack.hpp"
+#include "stack.cpp"
+
+
+
+int main(void){
+    Stack<char,30> stack;
+    int i = 0;
+
+
+    while (i < 26){
+        stack.push(i + 'A');
+    }
+    stack.print();
+
+    while (!stack.empty()){
+        std::cout << stack.pop() << std::endl;
+    }
+
+
+    return 0;
+}
